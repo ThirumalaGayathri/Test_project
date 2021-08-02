@@ -1,0 +1,150 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <title>  table</title>
+    <script type="text/javascript">
+function closewin(){
+    w.close();
+}
+function total1() {
+  b= parseInt(document.getElementById("pr1").value);
+  c =  parseInt(document.getElementById("qt1").value);
+  e = b*c;
+  document.getElementById("tot1").value = e;
+}
+function total2() {
+  b= parseInt(document.getElementById("pr2").value);
+  c =  parseInt(document.getElementById("qt2").value);
+  e = b*c;
+  document.getElementById("tot2").value = e;
+}
+function total3() {
+  b= parseInt(document.getElementById("pr3").value);
+  c =  parseInt(document.getElementById("qt3").value);
+  e = b*c;
+  document.getElementById("tot3").value = e;
+}
+function total4() {
+  b= parseInt(document.getElementById("pr4").value);
+  c =  parseInt(document.getElementById("qt4").value);
+  e = b*c;
+  document.getElementById("tot4").value = e;
+}
+function grandtotal(){
+            a = parseInt( document.getElementById("tot1").value);
+            b = parseInt( document.getElementById("tot2").value);
+            c = parseInt( document.getElementById("tot3").value);
+            d = parseInt( document.getElementById("tot4").value);
+            e = parseInt(a+b+c+d);
+            document.getElementById("gt").value=e;
+}
+
+function currency()
+    {
+
+      gt = document.getElementById("gt").value;
+        document.getElementById("gt").value = parseInt(gt/72);
+    }
+    function Popup(){
+
+                w=open("","","width=300,height=300,scrollbars=0");
+                a = parseInt( document.getElementById("pId1").value);
+                        b = parseInt( document.getElementById("pId2").value);
+                        c = parseInt( document.getElementById("pId3").value);
+                        d = parseInt( document.getElementById("pId4").value);
+                e = parseInt( document.getElementById("tot1").value);
+                        f= parseInt( document.getElementById("tot2").value);
+                        g = parseInt( document.getElementById("tot3").value);
+                        h = parseInt( document.getElementById("tot3").value);
+                w.document.write("<table border=1>");
+
+                w.document.write("<tr>")
+                    w.document.write("<td>")
+                    w.document.write(a);
+                    w.document.write("</td>")
+                    w.document.write("<td>")
+                    w.document.write(e);
+                    w.document.write("</td>")
+                w.document.write("</tr>")
+
+                w.document.write("<tr>")
+                    w.document.write("<td>")
+                    w.document.write(b);
+                    w.document.write("</td>")
+                    w.document.write("<td>")
+                    w.document.write(f);
+                    w.document.write("</td>")
+                w.document.write("</tr>")
+
+                w.document.write("<tr>")
+                    w.document.write("<td>")
+                    w.document.write(c);
+                    w.document.write("</td>")
+                    w.document.write("<td>")
+                    w.document.write(g);
+                    w.document.write("</td>")
+                w.document.write("</tr>")
+
+                w.document.write("<tr>")
+                    w.document.write("<td>")
+                    w.document.write(d);
+                    w.document.write("</td>")
+                    w.document.write("<td>")
+                    w.document.write(h);
+                    w.document.write("</td>")
+                w.document.write("</tr>")
+                w.document.write("</table>");
+            }
+
+    </script>
+</head>
+<body topmargin="250">
+    <select id="c1">
+        <option>Rupees</option>
+        <option> dollars</option>
+    </select>
+
+    <input type=button value="Change Money" onclick="currency()">
+    <table>
+        <tr>
+            <th>pId</th>
+            <th>Product</th>
+            <th> Amount </th>
+            <th>qty</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="pId1"></td>
+            <td><input type="text" id="pname1"></td>
+            <td><input type="text" id="pr1"></td>
+            <td> <input type="text" id="qt1"></td>
+            <td> <input type="text" id="tot1" onmouseover="total1()"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="pId2"></td>
+            <td><input type="text" id="pname2"></td>
+            <td><input type="text" id="pr2"></td>
+            <td> <input type="text" id="qt2"></td>
+            <td> <input type="text" id="tot2" onmouseover="total2()"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="pId3"></td>
+            <td><input type="text" id="pname3"></td>
+            <td><input type="text" id="pr3"></td>
+            <td> <input type="text" id="qt3"></td>
+            <td> <input type="text" id="tot3" onmouseover="total3()"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="pId4"></td>
+            <td><input type="text" id="pname4"></td>
+            <td><input type="text" id="pr4"></td>
+            <td> <input type="text" id="qt4"></td>
+            <td> <input type="text" id="tot4" onmouseover="total4()"></td>
+        </tr>
+    </table><br>
+
+    <label>Total overall  <input type="text" value="" id="gt" onclick="grandtotal()"></label>
+    <input type="button" value="Submit" id="submit" onclick="Popup()">
+    <input type="button" value="close" onclick="closewin()">
+</body>
+</html>

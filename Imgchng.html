@@ -1,0 +1,87 @@
+﻿<html>
+<head>
+    <script>
+      var start = 1 ;
+      function imgchange() {
+          setInterval(img, 1000);
+      }
+      function img()
+      {
+          var imgdata;
+          if(start == 1)
+          {
+              imgdata = "img1.jpg";
+
+          }
+           else if(start == 2)
+          {
+              imgdata = "img2.jpg";
+
+          }
+          else if(start == 3)
+          {
+              imgdata = "img3.jpg" ;
+
+          }
+          else if(start == 4)
+          {
+              imgdata = "img4.jpg";
+
+          }
+          else{
+              start = 1;
+          }
+          document.getElementById("data").src = "" +imgdata;
+          start++;
+          }
+    </script>
+</head>
+<body onload="imgchange()">
+    <div id="imgdata">
+        <img src="images/img1.jpg" id="data">
+    </div>
+</body>
+</html><html>
+<head>
+    <script>
+      var start = 1 ;
+      function imgchange() {
+          setInterval(img, 1000);
+      }
+      function img()
+      {
+          var imgdata;
+          if(start == 1)
+          {
+              imgdata = "img1.jpg";
+
+          }
+           else if(start == 2)
+          {
+              imgdata = "img2.jpg";
+
+          }
+          else if(start == 3)
+          {
+              imgdata = "img3.jpg" ;
+
+          }
+          else if(start == 4)
+          {
+              imgdata = "img4.jpg";
+
+          }
+          else{
+              start = 1;
+          }
+          document.getElementById("data").src = "" +imgdata;
+          start++;
+          }
+    </script>
+</head>
+<body onload="imgchange()">
+    <div id="imgdata">
+        <img src="images/img1.jpg" id="data">
+    </div>
+</body>
+</html>

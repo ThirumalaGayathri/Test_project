@@ -1,0 +1,37 @@
+﻿<html>
+<style>
+    body {
+        text-align: center;
+    }
+
+    #box {
+        display: block;
+        color: red;
+        margin: 150px auto;
+        -webkit-border-radius: 10px;
+        opacity: 0.6;
+        background: yellow;
+        width: 120px;
+        height: 75px;
+        border: 7px solid blue;
+        background: yellow;
+        -webkit-transition: -webkit-transform 2s,opacity 2s, background 2s, width 2s, height 2s,border 2s;
+    }
+
+        #box:hover {
+            -webkit-transform: rotate(360deg);
+            opacity: 1;
+            background: orange;
+            width: 450px;
+            height: 110px;
+            border: 10px solid red;
+        }
+</style>
+
+
+
+<body>
+    <div id="box">Animating and transitions</div>
+</body>
+</html>
+<!DOCTYPE html>
